@@ -22,7 +22,7 @@ const Card = ({ data, colour = "blue", children }) => {
 
   return (
     <div
-      className={`space-y-5 rounded-lg ${bgClass} p-6 text-center font-medium shadow-sm md:text-left`}
+      className={`rounded-lg ${bgClass} p-6 text-center font-medium shadow-sm md:text-left`}
     >
       <h4 className="text-md">{children}</h4>
       <h2 className={`${textClass} text-2xl font-bold`}>{data}</h2>

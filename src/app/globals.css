@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.chart-card-container {
+  @apply h-full rounded-lg border border-gray-200 bg-white p-6 shadow-sm;
+}
+
+.chart-heading {
+  @apply mb-8 text-center text-lg font-bold;
+}

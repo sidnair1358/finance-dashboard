@@ -1,10 +1,9 @@
-import React from "react";
 import NavLinks from "./NavLinks";
 
 const Navbar = ({ isMobile = false }) => {
   const user = {
-    name: "Sid Nair",
-    email: "sid@email.com",
+    name: "John Travolta",
+    email: "john@email.com",
     avatar: "https://avatar.iran.liara.run/public/50",
   };
 
