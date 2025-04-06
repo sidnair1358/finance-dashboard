@@ -7,6 +7,8 @@ const NAV_ITEMS = [
   { name: "Accounts", href: "#" },
   { name: "Transactions", href: "#" },
   { name: "Reports", href: "#" },
+  { name: "Analytics", href: "#" },
+  { name: "Analytics", href: "#" },
 ];
 
 const NavLinks = ({ isMobile = false }) => {
@@ -16,12 +18,12 @@ const NavLinks = ({ isMobile = false }) => {
 
   const containerClasses = isMobile
     ? "flex flex-col gap-1"
-    : "mx-auto flex w-2/3 content-center items-center justify-between";
+    : "mx-auto flex w-full content-center items-center justify-between";
 
   return (
     <div className={containerClasses}>
-      {NAV_ITEMS.map((item) => (
-        <Link key={item.name} href={item.href} className={linkClasses}>
+      {NAV_ITEMS.map((item, i) => (
+        <Link key={i} href={item.href} className={linkClasses}>
           {item.name}
         </Link>
       ))}
