@@ -16,7 +16,7 @@ const mockStore = {
     ],
     datasets: [
       {
-        label: "New MRR",
+        label: "Gross MRR",
         data: [12, 19, 15, 22, 18, 24, 30],
         borderColor: "#636AE8",
         backgroundColor: "rgba(99, 106, 232, 0.2)",
@@ -56,6 +56,19 @@ const mockStore = {
         data: [1600, 550, 650, 280, 350, 900],
         backgroundColor: "rgba(232, 97, 140, 0.7)",
         borderColor: "#E8618C",
+        borderWidth: 1,
+      },
+    ],
+  },
+  customerComparison: {
+    labels: ["Wordsworth", "Tolstoy", "Hemingway", "Chekov", "Kipling"],
+
+    datasets: [
+      {
+        label: "Total Sales",
+        data: [1500, 900, 1200, 1300, 1200],
+        backgroundColor: "rgba(99, 106, 232, 0.7)",
+        borderColor: "#636AE8",
         borderWidth: 1,
       },
     ],
@@ -136,6 +149,63 @@ const mockStore = {
         backgroundColor: "rgba(99, 106, 232, 0.2)",
         borderColor: "#636AE8",
         borderWidth: 2,
+      },
+    ],
+  },
+  riskReturnAnalysis: {
+    datasets: [
+      {
+        label: "Investment Portfolio",
+        data: [
+          { x: 2.1, y: 5.3, r: 10, sizeLabel: "Bonds" },
+          { x: 10.5, y: 8.2, r: 15, sizeLabel: "ETFs" },
+          { x: 25.3, y: 12.5, r: 20, sizeLabel: "Stocks" },
+          { x: 45.6, y: 18.9, r: 18, sizeLabel: "Private Equity" },
+          { x: 65.0, y: 28.4, r: 14, sizeLabel: "Startup" },
+          { x: 89.7, y: 35.1, r: 12, sizeLabel: "Crypto" },
+        ],
+        backgroundColor: [
+          "rgba(75, 192, 192, 0.6)",
+          "rgba(255, 206, 86, 0.6)",
+          "rgba(54, 162, 235, 0.6)",
+          "rgba(255, 99, 132, 0.6)",
+        ],
+        borderColor: [
+          "rgba(75, 192, 192, 1)",
+          "rgba(255, 206, 86, 1)",
+          "rgba(54, 162, 235, 1)",
+          "rgba(255, 99, 132, 1)",
+        ],
+        borderWidth: 1,
+      },
+    ],
+  },
+  productPerformance: {
+    datasets: [
+      {
+        label: "Product Performance",
+        data: [
+          { x: 1000, y: 4.2, sizeLabel: "Product A" },
+          { x: 3000, y: 7.5, sizeLabel: "Product B" },
+          { x: 500, y: 3.1, sizeLabel: "Product C" },
+          { x: 2000, y: 6.8, sizeLabel: "Product D" },
+          { x: 7000, y: 5.5, sizeLabel: "Product E" },
+        ],
+        backgroundColor: [
+          "rgba(255, 99, 132, 0.6)",
+          "rgba(54, 162, 235, 0.6)",
+          "rgba(75, 192, 192, 0.6)",
+          "rgba(255, 206, 86, 0.6)",
+          "rgba(153, 102, 255, 0.6)",
+        ],
+        borderColor: [
+          "rgba(255, 99, 132, 1)",
+          "rgba(54, 162, 235, 1)",
+          "rgba(75, 192, 192, 1)",
+          "rgba(255, 206, 86, 1)",
+          "rgba(153, 102, 255, 1)",
+        ],
+        borderWidth: 1,
       },
     ],
   },

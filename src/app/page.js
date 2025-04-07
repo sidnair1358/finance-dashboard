@@ -1,15 +1,17 @@
 import DashboardHeader from "./components/DashboardHeader";
 import LineChart from "./components/LineChart";
 import PieChart from "./components/PieChart";
-import MrrAreaChart from "./components/AreaChart";
 import RadarChart from "./components/RadarChart";
 import PolarChart from "./components/PolarChart";
-import BubbleChart from "./components/BubbleChart";
 import HorizontalBarChart from "./components/HorizontalBarChart";
-import FinancialSummaryCards from "./components/FinancialSummaryCards";
+import FinancialSummary from "./components/FinancialSummary";
 import ProfitMarginSection from "./components/ProfitMarginSection";
+import VerticalBarChart from "./components/VerticalBarChart";
 import mockStore from "./mockStore";
 import "./globals.css";
+import BubbleChart from "./components/BubbleChart";
+import ScatterChart from "./components/ScatterChart";
+import RecurringRevenueContainer from "./components/RecurringRevenueContainer";
 
 export const metadata = {
   title: "Expense Overview | Finance Dashboard",
@@ -17,24 +19,33 @@ export const metadata = {
 
 export default function Home() {
   const {
-    mrr,
     budgetComparison,
     captialComparison,
     invoiceStatus,
     wageDistribution,
     financialHealth,
+    customerComparison,
+    riskReturnAnalysis,
+    productPerformance,
   } = mockStore;
 
   return (
     <div className="mx-auto w-full px-2 py-2 md:px-8">
       <DashboardHeader />
-      <section className="mt-6 space-y-6 md:grid md:grid-cols-3 md:gap-6 md:space-y-0">
-        <FinancialSummaryCards />
+      <section className="mt-6 space-y-6 md:grid md:grid-cols-3 md:gap-6 md:space-y-0 lg:grid-cols-3">
+        <FinancialSummary />
         <ProfitMarginSection />
+        <div className="chart-card-container sm:hidden lg:block">
+          <h2 className="chart-heading">Top 5 Customers</h2>
+          <VerticalBarChart
+            labels={customerComparison.labels}
+            datasets={customerComparison.datasets}
+          />
+        </div>
       </section>
-      <section className="mt-6 space-y-6 md:grid md:grid-cols-3 md:gap-6 md:space-y-0">
+      <section className="mt-6 space-y-6 md:grid lg:grid-cols-3 lg:gap-6 lg:space-y-0">
         <article className="md:col-span-2">
-          <div className="h-full rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+          <div className="chart-card-container">
             <h2 className="chart-heading">
               Net Working Capital vs Gross Working Capital
             </h2>
@@ -48,7 +59,7 @@ export default function Home() {
             </div>
           </div>
         </article>
-        <div className="h-full rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+        <div className="chart-card-container sm:block md:hidden lg:block">
           <h2 className="chart-heading">Invoices by Status</h2>
           <PieChart
             labels={invoiceStatus.labels}
@@ -56,7 +67,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
+      <section className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         <div className="chart-card-container">
           <h2 className="chart-heading">Monthly Budget vs Actual Spending</h2>
           <HorizontalBarChart
@@ -64,7 +75,7 @@ export default function Home() {
             labels={budgetComparison.labels}
           />
         </div>
-        <div className="chart-card-container">
+        <div className="chart-card-container sm:hidden lg:block">
           <h2 className="chart-heading">Your Financial Health</h2>
           <RadarChart
             labels={financialHealth.labels}
@@ -79,14 +90,35 @@ export default function Home() {
           />
         </div>
       </section>
+      <section className="mt-6 hidden grid-cols-1 gap-6 md:grid md:grid-cols-2 lg:hidden">
+        <div className="chart-card-container">
+          <h2 className="chart-heading">Your Financial Health</h2>
+          <RadarChart
+            labels={financialHealth.labels}
+            datasets={financialHealth.datasets}
+          />
+        </div>
+        <div className="chart-card-container">
+          <h2 className="chart-heading">Top 5 Customers</h2>
+          <VerticalBarChart
+            labels={customerComparison.labels}
+            datasets={customerComparison.datasets}
+          />
+        </div>
+      </section>
       <section className="mt-6">
-        <div className="space-y-4 lg:gap-6 lg:space-y-0">
-          <div className="h-full rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-            <h2 className="chart-heading">Monthly Recurring Revenue (MRR)</h2>
-            <MrrAreaChart labels={mrr.labels} datasets={mrr.datasets} />
+        <div className="space-y-6 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
+          <div className="chart-card-container">
+            <h2 className="chart-heading">Risk Return Analysis</h2>
+            <BubbleChart datasets={riskReturnAnalysis.datasets} />
+          </div>
+          <div className="chart-card-container">
+            <h2 className="chart-heading">Product Performance</h2>
+            <ScatterChart datasets={productPerformance.datasets} />
           </div>
         </div>
       </section>
+      <RecurringRevenueContainer />
     </div>
   );
 }

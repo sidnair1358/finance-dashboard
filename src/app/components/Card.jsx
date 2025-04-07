@@ -17,8 +17,7 @@ const COLOR_VARIANTS = {
 
 const Card = ({ data, colour = "blue", children }) => {
   const colorKey = colour.toLowerCase();
-  const { bg: bgClass, text: textClass } =
-    COLOR_VARIANTS[colorKey] || COLOR_VARIANTS.blue;
+  const { bg: bgClass, text: textClass } = COLOR_VARIANTS[colorKey];
 
   return (
     <div

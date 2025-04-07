@@ -22,8 +22,8 @@ const UtilityActions = () => {
       ))}
       <div className="hidden h-8 w-8 cursor-pointer rounded-full lg:block">
         <img
-          src="https://avatar.iran.liara.run/public/50"
-          aria-label="Profile picture"
+          alt="Profile picture"
+          src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"
         />
       </div>
     </div>

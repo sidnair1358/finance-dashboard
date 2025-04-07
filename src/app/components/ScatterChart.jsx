@@ -8,11 +8,11 @@ import {
   LinearScale,
   Title,
 } from "chart.js";
-import { Bubble } from "react-chartjs-2";
+import { Scatter } from "react-chartjs-2";
 
 ChartJS.register(PointElement, LinearScale, Title, Tooltip, Legend);
 
-const BubbleChart = ({ datasets }) => {
+const ScatterChart = ({ datasets }) => {
   const data = {
     datasets,
   };
@@ -23,12 +23,11 @@ const BubbleChart = ({ datasets }) => {
       tooltip: {
         callbacks: {
           label: (context) => {
-            const { x, y, r, sizeLabel } = context.raw;
+            const { x, y, sizeLabel } = context.raw;
             const toolTipText = [
-              `Risk: ${x}%`,
-              `Return: ${y}%`,
-              `Exp: ${r}%`,
-              `Type: ${sizeLabel}`,
+              `Marketing Spend: $${x}`,
+              `Units Sold: ${y}k`,
+              `Product: ${sizeLabel}`,
             ];
             return toolTipText;
           },
@@ -45,14 +44,17 @@ const BubbleChart = ({ datasets }) => {
       x: {
         title: {
           display: true,
-          text: "Risk (Volatility %)",
+          text: "Marketing Spend (USD)",
         },
         beginAtZero: true,
       },
       y: {
         title: {
           display: true,
-          text: "Annual Return %",
+          text: "Units Sold",
+        },
+        ticks: {
+          callback: (value) => `${value}k`,
         },
         beginAtZero: true,
       },
@@ -60,10 +62,10 @@ const BubbleChart = ({ datasets }) => {
   };
 
   return (
-    <div className="flex h-50 w-full items-center justify-center overflow-x-scroll">
-      <Bubble data={data} options={options} />
+    <div className="flex h-50 items-center justify-center">
+      <Scatter data={data} options={options} />
     </div>
   );
 };
 
-export default BubbleChart;
+export default ScatterChart;

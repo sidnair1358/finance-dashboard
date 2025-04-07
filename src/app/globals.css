@@ -7,3 +7,20 @@
 .chart-heading {
   @apply mb-8 text-center text-lg font-bold;
 }
+
+.chart-card-container {
+  transition: transform 0.2s;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .chart-card-container {
+    cursor: pointer;
+  }
+
+  .chart-card-container:hover {
+    transform: scale(1.01);
+    box-shadow:
+      0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+}

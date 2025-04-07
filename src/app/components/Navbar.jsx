@@ -2,9 +2,10 @@ import NavLinks from "./NavLinks";
 
 const Navbar = ({ isMobile = false }) => {
   const user = {
-    name: "John Travolta",
-    email: "john@email.com",
-    avatar: "https://avatar.iran.liara.run/public/50",
+    name: "Jenny Travolta",
+    email: "jenny@email.com",
+    avatar:
+      "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light",
   };
 
   const UserProfile = ({ user }) => (

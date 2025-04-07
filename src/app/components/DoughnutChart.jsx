@@ -19,8 +19,7 @@ const COLOR_SCHEMES = {
 const CENTER_TEXT_FONT = "bold 24px sans-serif";
 
 const DoughnutChart = ({ percentage = 40, bg = "blue", labels }) => {
-  const { primary: background, secondary: fill } =
-    COLOR_SCHEMES[bg] || COLOR_SCHEMES.blue;
+  const { primary: background, secondary: fill } = COLOR_SCHEMES[bg];
 
   // https://stackoverflow.com/questions/20966817/how-to-add-text-inside-the-doughnut-chart-using-chart-js
   const centerTextPlugin = {
@@ -74,7 +73,7 @@ const DoughnutChart = ({ percentage = 40, bg = "blue", labels }) => {
   };
 
   return (
-    <div className="h-full w-full">
+    <div className="h-full md:w-30">
       <Doughnut
         data={chartData}
         options={chartOptions}

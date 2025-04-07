@@ -3,6 +3,7 @@ import { useState } from "react";
 import Navbar from "./Navbar";
 import UtilityActions from "./UtillityActions";
 import HamburgerMenu from "./HamburgerMenu";
+import Logo from "../icons/Logo";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,22 +12,9 @@ export function Header() {
     <header className="w-full">
       <div className="flex w-full items-center justify-between border-b-1 border-gray-200 px-4 py-3 sm:px-6 lg:px-8 lg:py-4">
         <div className="flex items-center gap-3">
-          <svg
-            width="40"
-            height="40"
-            viewBox="0 0 48 48"
-            fill="none"
-            className="lg:h-12 lg:w-12"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect width="48" height="48" rx="8" fill="#4F46E5" />
-            <path
-              d="M16 32V16H20V20H24V16H28V32H24V24H20V32H16Z"
-              fill="white"
-            />
-          </svg>
+          <Logo />
           <span className="text-lg font-semibold whitespace-nowrap lg:text-xl">
-            Paapi.ai
+            Fin-Dash
           </span>
         </div>
         {/* Search - Desktop Only */}

@@ -23,15 +23,23 @@ ChartJS.register(
 );
 
 const LineChart = ({ datasets, labels }) => {
-  const chartData = {
+  const data = {
     labels,
     datasets,
   };
 
-  const chartOptions = {
+  const options = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
+      tooltip: {
+        callbacks: {
+          label: (context) => {
+            const label = context.dataset.label || "";
+            return `${label}: $${context.raw.toLocaleString()}k`;
+          },
+        },
+      },
       legend: {
         position: "top",
       },
@@ -41,7 +49,7 @@ const LineChart = ({ datasets, labels }) => {
         beginAtZero: true,
         ticks: {
           callback: function (value) {
-            return "$" + value;
+            return "$" + value + "k";
           },
         },
       },
@@ -50,7 +58,7 @@ const LineChart = ({ datasets, labels }) => {
 
   return (
     <div className="h-50 w-full">
-      <Line data={chartData} options={chartOptions} />
+      <Line data={data} options={options} />
     </div>
   );
 };
