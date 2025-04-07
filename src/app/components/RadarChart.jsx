@@ -5,17 +5,10 @@ import { Chart as ChartJS, RadialLinearScale, LineElement } from "chart.js";
 
 ChartJS.register(RadialLinearScale, LineElement);
 
-const RadarChart = () => {
+const RadarChart = ({ labels, datasets }) => {
   const data = {
-    labels: ["Savings", "Investments", "Debt", "Income", "Expenses", "Credit"],
-    datasets: [
-      {
-        data: [75, 60, 40, 85, 65, 90],
-        backgroundColor: "rgba(99, 106, 232, 0.2)",
-        borderColor: "#636AE8",
-        borderWidth: 2,
-      },
-    ],
+    labels,
+    datasets,
   };
 
   const options = {

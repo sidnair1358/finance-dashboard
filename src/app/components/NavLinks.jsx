@@ -14,7 +14,7 @@ const NAV_ITEMS = [
 const NavLinks = ({ isMobile = false }) => {
   const linkClasses = isMobile
     ? "rounded px-3 py-2 text-sm font-medium hover:bg-gray-100"
-    : "text-sm font-medium hover:text-indigo-600";
+    : "text-sm font-medium hover:text-indigo-600 focus:text-indigo-600 focus:border-b-2 focus:border-indigo-500";
 
   const containerClasses = isMobile
     ? "flex flex-col gap-1"

@@ -5,32 +5,10 @@ import { Chart as ChartJS, BarElement, Tooltip, Legend } from "chart.js";
 
 ChartJS.register(BarElement, Tooltip, Legend);
 
-const HorizontalBarChart = () => {
+const HorizontalBarChart = ({ datasets, labels }) => {
   const data = {
-    labels: [
-      "Rent",
-      "Transportation",
-      "Utilities",
-      "Maintenance",
-      "Ground Rent",
-      "Broadband",
-    ],
-    datasets: [
-      {
-        label: "Budgeted",
-        data: [1500, 600, 500, 300, 200, 1000],
-        backgroundColor: "rgba(99, 106, 232, 0.7)",
-        borderColor: "#636AE8",
-        borderWidth: 1,
-      },
-      {
-        label: "Actual",
-        data: [1600, 550, 650, 280, 350, 900],
-        backgroundColor: "rgba(232, 97, 140, 0.7)",
-        borderColor: "#E8618C",
-        borderWidth: 1,
-      },
-    ],
+    labels,
+    datasets,
   };
 
   const options = {
@@ -72,7 +50,7 @@ const HorizontalBarChart = () => {
   };
 
   return (
-    <div className="h-64 justify-center">
+    <div className="h-64">
       <Bar data={data} options={options} />
     </div>
   );

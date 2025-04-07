@@ -74,7 +74,7 @@ const DoughnutChart = ({ percentage = 40, bg = "blue", labels }) => {
   };
 
   return (
-    <div className="h-50 w-full">
+    <div className="h-full w-full">
       <Doughnut
         data={chartData}
         options={chartOptions}

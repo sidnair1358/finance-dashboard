@@ -2,17 +2,18 @@ import React from "react";
 import Card from "./Card";
 
 const FinancialSummaryCards = () => {
+  const financialMetrics = [
+    { amount: "$250,000", colour: "blue", title: "Total Assets" },
+    { amount: "$50,000", colour: "pink", title: "Total Liabilities" },
+    { amount: "$200,000", colour: "green", title: "Net Worth" },
+  ];
   return (
     <div className="space-y-4 lg:grid lg:grid-rows-3 lg:gap-6 lg:space-y-0">
-      <Card colour="blue" data="$250,000">
-        Total Assets
-      </Card>
-      <Card colour="pink" data="$50,000">
-        Total Liabilities
-      </Card>
-      <Card colour="green" data="$200,000">
-        Net Worth
-      </Card>
+      {financialMetrics.map((data, i) => (
+        <Card key={i} colour={data.colour} data={data.amount}>
+          {data.title}
+        </Card>
+      ))}
     </div>
   );
 };

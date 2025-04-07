@@ -5,26 +5,10 @@ import { Chart as ChartJS, RadialLinearScale, ArcElement } from "chart.js";
 
 ChartJS.register(RadialLinearScale, ArcElement);
 
-const PolarChart = ({
-  categories = ["Marketing", "Finance", "IT", "Branding", "Customer Services"],
-  amounts = [700, 900, 1000, 700, 850],
-}) => {
+const PolarChart = ({ labels, datasets }) => {
   const data = {
-    labels: categories,
-    datasets: [
-      {
-        data: amounts,
-        backgroundColor: [
-          "#636AE8",
-          "#E8618C",
-          "#4BC0C0",
-          "#FFCE56",
-          "#9966FF",
-        ],
-        borderWidth: 1,
-        borderColor: "#fff",
-      },
-    ],
+    labels,
+    datasets,
   };
 
   const options = {

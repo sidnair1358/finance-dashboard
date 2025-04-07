@@ -4,22 +4,10 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const PieChart = () => {
+const PieChart = ({ labels, datasets }) => {
   const data = {
-    labels: ["Paid", "Authorized", "Voided", "Deleted", "Draft"],
-    datasets: [
-      {
-        data: [5500, 4800, 2200, 1500, 900],
-        backgroundColor: [
-          "#636AE8",
-          "#E8618C",
-          "#4BC0C0",
-          "#FFCE56",
-          "#9966FF",
-        ],
-        hoverOffset: 15,
-      },
-    ],
+    labels,
+    datasets,
   };
 
   const options = {

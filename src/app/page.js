@@ -1,6 +1,4 @@
 import DashboardHeader from "./components/DashboardHeader";
-import Card from "./components/Card";
-import DoughnutChart from "./components/DoughnutChart";
 import LineChart from "./components/LineChart";
 import PieChart from "./components/PieChart";
 import MrrAreaChart from "./components/AreaChart";
@@ -10,6 +8,7 @@ import BubbleChart from "./components/BubbleChart";
 import HorizontalBarChart from "./components/HorizontalBarChart";
 import FinancialSummaryCards from "./components/FinancialSummaryCards";
 import ProfitMarginSection from "./components/ProfitMarginSection";
+import mockStore from "./mockStore";
 import "./globals.css";
 
 export const metadata = {
@@ -17,8 +16,15 @@ export const metadata = {
 };
 
 export default function Home() {
-  const actualSavings = [2000, 3000, 3500, 4000, 4200, 4500, 5000];
-  const projectedSavings = [2500, 3200, 4000, 4500, 4800, 5200, 5500];
+  const {
+    mrr,
+    budgetComparison,
+    captialComparison,
+    invoiceStatus,
+    wageDistribution,
+    financialHealth,
+  } = mockStore;
+
   return (
     <div className="mx-auto w-full px-2 py-2 md:px-8">
       <DashboardHeader />
@@ -35,8 +41,8 @@ export default function Home() {
             <div className="items-center justify-center gap-10 text-center font-bold md:flex-row md:gap-6">
               <div className="items-center gap-7">
                 <LineChart
-                  actualSavings={actualSavings}
-                  projectedSavings={projectedSavings}
+                  labels={captialComparison.labels}
+                  datasets={captialComparison.datasets}
                 />
               </div>
             </div>
@@ -44,28 +50,40 @@ export default function Home() {
         </article>
         <div className="h-full rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
           <h2 className="chart-heading">Invoices by Status</h2>
-          <PieChart />
+          <PieChart
+            labels={invoiceStatus.labels}
+            datasets={invoiceStatus.datasets}
+          />
         </div>
       </section>
       <section className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
         <div className="chart-card-container">
           <h2 className="chart-heading">Monthly Budget vs Actual Spending</h2>
-          <HorizontalBarChart />
+          <HorizontalBarChart
+            datasets={budgetComparison.datasets}
+            labels={budgetComparison.labels}
+          />
         </div>
         <div className="chart-card-container">
           <h2 className="chart-heading">Your Financial Health</h2>
-          <RadarChart />
+          <RadarChart
+            labels={financialHealth.labels}
+            datasets={financialHealth.datasets}
+          />
         </div>
         <div className="chart-card-container">
           <h2 className="chart-heading">Wages by Department</h2>
-          <PolarChart />
+          <PolarChart
+            labels={wageDistribution.labels}
+            datasets={wageDistribution.datasets}
+          />
         </div>
       </section>
       <section className="mt-6">
         <div className="space-y-4 lg:gap-6 lg:space-y-0">
           <div className="h-full rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
             <h2 className="chart-heading">Monthly Recurring Revenue (MRR)</h2>
-            <MrrAreaChart />
+            <MrrAreaChart labels={mrr.labels} datasets={mrr.datasets} />
           </div>
         </div>
       </section>

@@ -24,40 +24,10 @@ ChartJS.register(
   Filler,
 );
 
-const MrrAreaChart = () => {
+const MrrAreaChart = ({ labels, datasets }) => {
   const data = {
-    labels: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ],
-    datasets: [
-      {
-        label: "New MRR",
-        data: [12, 19, 15, 22, 18, 24, 30],
-        borderColor: "#636AE8",
-        backgroundColor: "rgba(99, 106, 232, 0.2)",
-        tension: 0.3,
-        fill: "origin",
-      },
-      {
-        label: "Net MRR",
-        data: [10, 16, 14, 18, 15, 22, 25],
-        borderColor: "#4BC0C0",
-        backgroundColor: "rgba(75, 192, 192, 0.2)",
-        tension: 0.3,
-        fill: "origin",
-      },
-    ],
+    labels,
+    datasets,
   };
 
   const options = {
@@ -83,10 +53,6 @@ const MrrAreaChart = () => {
         ticks: {
           callback: (value) => `$${value}k`,
         },
-        title: {
-          display: true,
-          text: "Amount (USD)",
-        },
       },
       x: {
         grid: {
@@ -97,7 +63,7 @@ const MrrAreaChart = () => {
   };
 
   return (
-    <div className="h-80 w-full">
+    <div className="h-50 w-full">
       <Line data={data} options={options} />
     </div>
   );

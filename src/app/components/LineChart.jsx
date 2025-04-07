@@ -22,56 +22,10 @@ ChartJS.register(
   Legend,
 );
 
-const COLOR_SCHEMES = {
-  actual: {
-    primary: "#636AE8",
-    secondary: "#D5D8FF",
-  },
-  projected: {
-    primary: "#E8618C",
-    secondary: "#FDDCE6",
-  },
-};
-
-const LineChart = ({
-  projectedData = [650, 590, 800, 810, 560, 650, 800],
-  actualData = [500, 420, 600, 710, 400, 550, 700],
-  labels = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ],
-}) => {
+const LineChart = ({ datasets, labels }) => {
   const chartData = {
     labels,
-    datasets: [
-      {
-        label: "Net Working Captial",
-        data: actualData,
-        borderColor: COLOR_SCHEMES.actual.primary,
-        backgroundColor: COLOR_SCHEMES.actual.secondary,
-        tension: 0.1,
-        borderWidth: 2,
-      },
-      {
-        label: "Gross Working Capital",
-        data: projectedData,
-        borderColor: COLOR_SCHEMES.projected.primary,
-        backgroundColor: COLOR_SCHEMES.projected.secondary,
-        tension: 0.1,
-        borderWidth: 2,
-        borderDash: [5, 5],
-      },
-    ],
+    datasets,
   };
 
   const chartOptions = {
