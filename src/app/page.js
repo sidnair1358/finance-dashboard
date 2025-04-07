@@ -8,10 +8,14 @@ import FinancialSummary from "./components/FinancialSummary";
 import ProfitMarginSection from "./components/ProfitMarginSection";
 import VerticalBarChart from "./components/VerticalBarChart";
 import mockStore from "./mockStore";
-import "./globals.css";
 import BubbleChart from "./components/BubbleChart";
 import ScatterChart from "./components/ScatterChart";
 import RecurringRevenueContainer from "./components/RecurringRevenueContainer";
+import BudgetUtilization from "./components/BudgetUtilization";
+import LiquidityRatio from "./components/LiquidityRatio";
+import RevenueGrowth from "./components/RevenueGrowth";
+import GaugeContainer from "./components/GaugeContainer";
+import "./globals.css";
 
 export const metadata = {
   title: "Expense Overview | Finance Dashboard",
@@ -43,6 +47,7 @@ export default function Home() {
           />
         </div>
       </section>
+      <GaugeContainer />
       <section className="mt-6 space-y-6 md:grid lg:grid-cols-3 lg:gap-6 lg:space-y-0">
         <article className="md:col-span-2">
           <div className="chart-card-container">

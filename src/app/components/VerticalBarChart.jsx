@@ -51,6 +51,9 @@ const VerticalBarChart = ({ datasets, labels }) => {
         grid: {
           display: false,
         },
+        ticks: {
+          callback: (value) => `$${value}`,
+        },
       },
     },
   };
