@@ -6,7 +6,7 @@ A responsive financial analytics dashboard built with modern web technologies, f
 
 ### 🚀 Core Functionality
 
-- **10+ Interactive Charts** (Line, Bar, Pie, Scatter, Radar, Bubble, Area, Doughnut)
+- **10 Interactive Charts** (Line, Bar, Pie, Scatter, Radar, Bubble, Area, Doughnut)
 - **Responsive Design** - Fully optimized for mobile, tablet & desktop
 - **Mock Data Management** - Centralized `mockStore.js` for easy data management
 - **Basic Routing** - Navigable sections with React Router
