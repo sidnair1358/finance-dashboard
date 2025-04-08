@@ -47,4 +47,4 @@ A responsive financial analytics dashboard built with modern web technologies, f
 1. Date Range Filters - Dynamic data filtering
 2. Chart Modal View - Expandable chart details
 3. State Management - For complex interactions
-4. Dark Mode - Additional theme option
+4. Dark Mode - Additional theme options
