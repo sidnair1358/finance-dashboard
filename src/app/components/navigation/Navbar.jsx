@@ -21,7 +21,7 @@ const Navbar = ({ isMobile = false }) => {
   if (isMobile) {
     return (
       <nav className="fixed z-50 h-screen w-full bg-white lg:hidden">
-        <div className="flex h-[calc(100vh-100px)] flex-col">
+        <div className="flex h-[calc(100vh-150px)] flex-col">
           <div className="flex-1 overflow-y-auto px-4 py-2">
             <div className="my-4">
               <input
