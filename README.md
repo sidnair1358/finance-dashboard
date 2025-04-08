@@ -36,9 +36,15 @@ A responsive financial analytics dashboard built with modern web technologies, f
 
 ### Tools Used
 
-1. Next/React
-2. Tailwind
-3. Chart.js
-4. React Icons
-5. Prettier
-6. EsLint
+- **Framework** - Next.js/React
+- **Styling** - Tailwind CSS
+- **Charts** - Chart.js
+- **Icons** - React Icons
+- **Code Quality** - Prettier + ESLint
+
+### Planned Enhancements
+
+1. Date Range Filters - Dynamic data filtering
+2. Chart Modal View - Expandable chart details
+3. State Management - For complex interactions
+4. Dark Mode - Additional theme option
