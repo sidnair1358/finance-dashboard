@@ -1,5 +1,5 @@
 import React from "react";
-import HamburgerIcon from "../icons/HamburgerIcon";
+import HamburgerIcon from "../../icons/HamburgerIcon";
 
 const HamburgerMenu = ({ isMenuOpen, setIsMenuOpen }) => {
   return (

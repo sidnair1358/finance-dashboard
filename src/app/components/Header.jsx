@@ -1,9 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
-import Navbar from "./Navbar";
+import Navbar from "./Navigation/Navbar";
 import UtilityActions from "./UtillityActions";
-import HamburgerMenu from "./HamburgerMenu";
+import HamburgerMenu from "./Common/HamburgerMenu";
 import Logo from "../icons/Logo";
+import Link from "next/link";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,12 +23,14 @@ export function Header() {
   return (
     <header className="w-full">
       <div className="flex w-full items-center justify-between border-b-1 border-gray-200 px-4 py-3 sm:px-6 lg:px-8 lg:py-4">
-        <div className="flex items-center gap-3">
-          <Logo />
-          <span className="text-lg font-semibold whitespace-nowrap lg:text-xl">
-            Fin-Dash
-          </span>
-        </div>
+        <Link href="/">
+          <div className="flex items-center gap-3">
+            <Logo />
+            <span className="text-lg font-semibold whitespace-nowrap lg:text-xl">
+              Fin-Dash
+            </span>
+          </div>
+        </Link>
         {/* Search - Desktop Only */}
         <div className="hidden flex-1 lg:block lg:px-6">
           <input

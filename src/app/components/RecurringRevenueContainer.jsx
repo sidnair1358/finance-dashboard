@@ -1,6 +1,6 @@
 import React from "react";
 import mockStore from "../mockStore";
-import MrrAreaChart from "./AreaChart";
+import MrrAreaChart from "./Charts/AreaChart";
 
 const RecurringRevenueContainer = () => {
   const { mrr } = mockStore;

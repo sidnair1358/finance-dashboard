@@ -1,5 +1,5 @@
 import React from "react";
-import DoughnutChart from "./DoughnutChart";
+import DoughnutChart from "./Charts/DoughnutChart";
 
 const ProfitMarginSection = () => {
   return (

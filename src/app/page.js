@@ -1,19 +1,16 @@
 import DashboardHeader from "./components/DashboardHeader";
-import LineChart from "./components/LineChart";
-import PieChart from "./components/PieChart";
-import RadarChart from "./components/RadarChart";
-import PolarChart from "./components/PolarChart";
-import HorizontalBarChart from "./components/HorizontalBarChart";
+import LineChart from "./components/Charts/LineChart";
+import PieChart from "./components/Charts/PieChart";
+import RadarChart from "./components/Charts/RadarChart";
+import PolarChart from "./components/Charts/PolarChart";
+import HorizontalBarChart from "./components/Charts/HorizontalBarChart";
 import FinancialSummary from "./components/FinancialSummary";
 import ProfitMarginSection from "./components/ProfitMarginSection";
-import VerticalBarChart from "./components/VerticalBarChart";
+import VerticalBarChart from "./components/Charts/VerticalBarChart";
 import mockStore from "./mockStore";
-import BubbleChart from "./components/BubbleChart";
-import ScatterChart from "./components/ScatterChart";
+import BubbleChart from "./components/Charts/BubbleChart";
+import ScatterChart from "./components/Charts/ScatterChart";
 import RecurringRevenueContainer from "./components/RecurringRevenueContainer";
-import BudgetUtilization from "./components/BudgetUtilization";
-import LiquidityRatio from "./components/LiquidityRatio";
-import RevenueGrowth from "./components/RevenueGrowth";
 import GaugeContainer from "./components/GaugeContainer";
 import "./globals.css";
 
