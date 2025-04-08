@@ -1,9 +1,14 @@
 "use client";
 import React from "react";
 import { Chart } from "react-chartjs-2";
-import { Chart as ChartJS, RadialLinearScale, ArcElement } from "chart.js";
+import {
+  Chart as ChartJS,
+  PolarAreaController,
+  RadialLinearScale,
+  ArcElement,
+} from "chart.js";
 
-ChartJS.register(RadialLinearScale, ArcElement);
+ChartJS.register(PolarAreaController, RadialLinearScale, ArcElement);
 
 const PolarChart = ({ labels, datasets }) => {
   const data = {
