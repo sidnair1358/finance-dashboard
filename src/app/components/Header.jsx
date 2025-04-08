@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import Navbar from "./Navigation/Navbar";
+import Navbar from "./navigation/Navbar";
 import UtilityActions from "./UtilityActions";
 import HamburgerMenu from "./common/HamburgerMenu";
 import Logo from "./icons/Logo";
