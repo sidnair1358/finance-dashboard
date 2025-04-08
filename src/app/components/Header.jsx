@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Navbar from "./Navigation/Navbar";
 import UtilityActions from "./UtillityActions";
 import HamburgerMenu from "./common/HamburgerMenu";
@@ -8,6 +9,7 @@ import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -19,6 +21,10 @@ export default function Header() {
       document.body.style.overflow = "auto";
     };
   }, [isMenuOpen]);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   return (
     <header className="w-full">

@@ -6,13 +6,25 @@ export default function Footer() {
       <div className="mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div>
           <div className="flex items-center justify-center gap-20">
-            <a href="#" className="text-gray-600 hover:text-gray-900">
+            <a
+              href="#"
+              className="text-gray-600 hover:text-gray-900"
+              aria-label="GitHub repository"
+            >
               <FiGithub className="h-10 w-10" />
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-900">
+            <a
+              href="#"
+              className="text-gray-600 hover:text-gray-900"
+              aria-label="LinkedIn"
+            >
               <FiLinkedin className="h-10 w-10" />
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-900">
+            <a
+              href="#"
+              className="text-gray-600 hover:text-gray-900"
+              aria-label="Email"
+            >
               <FiMail className="h-10 w-10" />
             </a>
           </div>
