@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "chart.js": "^4.4.8",
-    "chartjs-gauge": "^0.3.0",
     "lodash": "^4.17.21",
     "next": "15.2.4",
     "react": "^19.0.0",
