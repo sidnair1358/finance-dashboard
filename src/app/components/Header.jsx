@@ -2,11 +2,11 @@
 import { useState, useEffect } from "react";
 import Navbar from "./Navigation/Navbar";
 import UtilityActions from "./UtillityActions";
-import HamburgerMenu from "./Common/HamburgerMenu";
-import Logo from "../icons/Logo";
+import HamburgerMenu from "./common/HamburgerMenu";
+import Logo from "./icons/Logo";
 import Link from "next/link";
 
-export function Header() {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
