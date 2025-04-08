@@ -60,7 +60,7 @@ const BubbleChart = ({ datasets }) => {
   };
 
   return (
-    <div className="flex h-50 w-full items-center justify-center overflow-x-scroll">
+    <div className="flex h-50 w-full items-center justify-center">
       <Bubble data={data} options={options} />
     </div>
   );

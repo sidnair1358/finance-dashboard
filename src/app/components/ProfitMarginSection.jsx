@@ -3,7 +3,7 @@ import DoughnutChart from "./charts/DoughnutChart";
 
 const ProfitMarginSection = () => {
   return (
-    <article className="md:col-span-2 lg:col-span-1">
+    <section className="md:col-span-2 lg:col-span-1">
       <div className="chart-card-container">
         <h2 className="chart-heading">Profit Margin</h2>
         <div className="flex flex-col items-center justify-center gap-10 text-center font-medium md:flex-row md:gap-6">
@@ -19,7 +19,7 @@ const ProfitMarginSection = () => {
           </div>
         </div>
       </div>
-    </article>
+    </section>
   );
 };
 

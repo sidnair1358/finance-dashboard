@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Finance Dashboard
 
-## Getting Started
+A responsive financial analytics dashboard built with modern web technologies, featuring interactive data visualizations and optimized for all device sizes.
 
-First, run the development server:
+## Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🚀 Core Functionality
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **10+ Interactive Charts** (Line, Bar, Pie, Scatter, Radar, Bubble, Area, Doughnut)
+- **Responsive Design** - Fully optimized for mobile, tablet & desktop
+- **Mock Data Management** - Centralized `mockStore.js` for easy data management
+- **Basic Routing** - Navigable sections with React Router
+- **Mobile-First UX** - Dismissible sidebar slider for smaller screens
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 🎨 Design & UX
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Tailwind CSS** - Utility-first styling for consistency
+- **Color System** - Cohesive, accessible color palette
+- **Grid Layout** - Clean alignment with proper spacing
+- **Interactive Elements**:
+  - Hover/focus states
+  - Informative tooltips
+  - Smooth animations
 
-## Learn More
+### Code Readability
 
-To learn more about Next.js, take a look at the following resources:
+1. Modular, reusable components.
+2. Formatting tailwind classes to sort class names in a consistent order - Structure → Layout → Flex/Grid → Spacing → Typography → Visuals → Transforms → Pseudo/Variants
+3. Use of tailwind directives for repeated styles.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📊 Chart.js Implementation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Built-in animations
+- Custom tooltips
+- Reusable chart components
 
-## Deploy on Vercel
+### Tools Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Next/React
+2. Tailwind
+3. Chart.js
+4. React Icons
+5. Prettier
+6. EsLint

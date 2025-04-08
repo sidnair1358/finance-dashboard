@@ -12,7 +12,7 @@ const Button = ({ primary = false, icon, children = "Button" }) => {
 
   return (
     <button className={`${baseClasses} ${sizeClasses} ${variantClasses}`}>
-      {icon}
+      {icon && icon}
       {children}
     </button>
   );

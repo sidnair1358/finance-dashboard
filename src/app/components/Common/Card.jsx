@@ -2,15 +2,15 @@ import React from "react";
 
 const COLOR_VARIANTS = {
   blue: {
-    bg: "bg-blue-50",
+    bg: "bg-blue-100",
     text: "text-blue-400",
   },
   green: {
-    bg: "bg-green-50",
+    bg: "bg-green-100",
     text: "text-green-400",
   },
   pink: {
-    bg: "bg-pink-50",
+    bg: "bg-pink-100",
     text: "text-pink-400",
   },
 };

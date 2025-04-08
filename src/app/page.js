@@ -11,7 +11,6 @@ import mockStore from "./mockStore";
 import BubbleChart from "./components/charts/BubbleChart";
 import ScatterChart from "./components/charts/ScatterChart";
 import RecurringRevenueContainer from "./components/RecurringRevenueContainer";
-import GaugeContainer from "./components/GaugeContainer";
 import "./globals.css";
 
 export const metadata = {
@@ -44,7 +43,6 @@ export default function Home() {
           />
         </div>
       </section>
-      <GaugeContainer />
       <section className="mt-6 space-y-6 md:grid lg:grid-cols-3 lg:gap-6 lg:space-y-0">
         <article className="md:col-span-2">
           <div className="chart-card-container">

@@ -11,3 +11,7 @@
 .chart-card-container {
   transition: transform 0.2s;
 }
+
+.footer-icon {
+  @apply h-10 w-10 text-gray-600 hover:text-indigo-600;
+}

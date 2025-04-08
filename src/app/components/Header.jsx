@@ -27,7 +27,7 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className="w-full">
+    <header className="mt-4 w-full">
       <div className="flex w-full items-center justify-between border-b-1 border-gray-200 px-4 py-3 sm:px-6 lg:px-8 lg:py-4">
         <Link href="/">
           <div className="flex items-center gap-3">
