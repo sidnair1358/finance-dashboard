@@ -1,12 +1,8 @@
 import NavLinks from "./NavLinks";
+import mockStore from "@/app/mockStore";
 
 const Navbar = ({ isMobile = false }) => {
-  const user = {
-    name: "Jenny Travolta",
-    email: "jenny@email.com",
-    avatar:
-      "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light",
-  };
+  const user = mockStore.user;
 
   const UserProfile = ({ user }) => (
     <div className="border-t border-gray-200 p-4">

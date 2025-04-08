@@ -5,7 +5,7 @@ import LiquidityRatio from "./LiquidityRatio";
 
 const GaugeContainer = () => {
   return (
-    <section className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-3">
+    <section className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
       <div className="chart-card-container">
         <h2 className="chart-heading">Revenue Growth</h2>
         <RevenueGrowth />
