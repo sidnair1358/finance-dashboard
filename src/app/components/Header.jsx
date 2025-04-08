@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Navbar from "./Navigation/Navbar";
-import UtilityActions from "./UtillityActions";
+import UtilityActions from "./UtilityActions";
 import HamburgerMenu from "./common/HamburgerMenu";
 import Logo from "./icons/Logo";
 import Link from "next/link";
