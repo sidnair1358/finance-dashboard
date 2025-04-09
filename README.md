@@ -4,7 +4,7 @@ A responsive financial analytics dashboard built with modern web technologies, f
 
 ## Key Features
 
-### 🚀 Core Functionality
+### Core Functionality
 
 - **10 Interactive Charts** (Line, Bar, Pie, Scatter, Radar, Bubble, Area, Doughnut, Polar etc)
 - **Responsive Design** - Fully optimized for mobile, tablet & desktop
@@ -12,7 +12,7 @@ A responsive financial analytics dashboard built with modern web technologies, f
 - **Basic Routing** - Navigable sections with React Router
 - **Mobile-First UX** - Dismissible sidebar slider for smaller screens
 
-### 🎨 Design & UX
+### Design & UX
 
 - **Tailwind CSS** - Utility-first styling for consistency
 - **Color System** - Cohesive, accessible color palette
@@ -28,7 +28,7 @@ A responsive financial analytics dashboard built with modern web technologies, f
 2. Formatting tailwind classes to sort class names in a consistent order - Structure → Layout → Flex/Grid → Spacing → Typography → Visuals → Transforms → Pseudo/Variants
 3. Use of tailwind directives for repeated styles.
 
-### 📊 Chart.js Implementation
+### Chart.js Implementation
 
 - Built-in animations
 - Custom tooltips
