@@ -48,3 +48,6 @@ A responsive financial analytics dashboard built with modern web technologies, f
 2. Chart Modal View - Expandable chart details
 3. State Management - For complex interactions
 4. Dark Mode - Additional theme options
+
+   <img width="1485" alt="image" src="https://github.com/user-attachments/assets/a280ae15-37c5-436e-aaad-b156ae2a3cbb" />
+
